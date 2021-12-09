@@ -1,32 +1,26 @@
-# CP1404/5632 Assignment: Songs To Learn by YOURNAME
-
-_Edit this README, replacing this line and above with your own assignment details._  
-_At the end of the project, complete the project reflection below by answering the questions (replace the ... parts)._
-_Note that to get full marks for this, your reflection should match the "exemplary" description from the rubric:_
-
-> The project reflection is complete and describes development and learning well, shows careful thought, highlights insights made during code development.
+CP1404 Assignment 2 – Songs To Learn 2.0 
+Task:
+Create a Graphical User Interface (GUI) program similar using Python 3 and the Kivy toolkit, as described in the following information and accompanying screencast. This assignment will help you build skills using classes and GUIs as well as giving you more practice using techniques like selection, repetition, exceptions, lists, file I/O and functions. 
 
 
-## 1. How long did the entire project (assignment 2) take you?
-...  about 2 weeks
-Note: You may like to use the WakaTime plugin, which tracks exactly how long you spend in code. See http://wakatime.com (but note that the free version only has a 7-day history)
+<img width="435" alt="SongToLearn screenshot 1" src="https://user-images.githubusercontent.com/44990567/145338974-22aa1a23-587a-4c13-9a50-4356658e7591.png">
 
-## 2. What are you most satisfied with?
-... I learned about Class and GUI. In the process of doing assignment 2, I learned how to use the Class and GUI. These two problems always make me very confuse, but now I understand and know how to use them, how to combine with Class and GUI(kivy).
+Program Overview:
+Ensure that your program GUI has the following features, as demonstrated in the screenshots and accompanying screencast:
+1. the left side of the screen contains a drop-down "spinner" for the user to choose the song sorting, and text entry fields for inputting information for a new song.
+2. the right side contains buttons for the songs, colour-coded based on whether they are learned or not
+3. the status bar at the top of the right side shows the number of songs learned and still to learn
+4. the status bar at the bottom of the right side shows messages about the state of the program, including updating when a song is clicked on
+5. the user can add a new song by entering text in the input fields and clicking “Add Song”
+6. the exact style (including colours) is up to you, but ensure that all functionality is readily accessible with your chosen GUI style
 
-## 3. What are you least satisfied with?
-...I still confuse how to sort the songs by (title, artist, year and is_required) and why we need the test_song and test_songlist.
+Program Functionality Details:
+Complete the main program in a Kivy App subclass in main.py. There will be no main() function, but rather your program will run() the Kivy app in the same way as you've seen in our example programs. The program should start by loading the same CSV file of songs as with your first assignment. This must be done with a method of your main app class and will save the songs as Song instances in a SongList instance (see below for details).
+The songs file must be saved when the program ends, updating any changes made with the app by the user (adding new songs or marking them as learned).
 
-
-## 4. What worked well in your development process?
-...I think the add songs, clean inputs of user, create widgets to show the song list, formatted song, user click the song and the song is marked learned and change the color of button. These parts are work well in my development process.
-
-## 5. What about your process could be improved the next time you do a project like this?
-...I think I will improve three parts, which are sorting the songs, testing_song and test_songlist.
-
-## 6. Describe what resources you used and how you used them.
-...I mainly use the KivyDemos-Master file and run each app, then I observe the each app and find the functions I need in the assignment 2. And write my code according to these templates.
-
-## 7. Describe the main challenges or obstacles you faced and how you overcame them.
-... sort songs, create widgets, add songs and the changing of color of the buttons.
-
+Adding features:
+All song fields are required. If a field is left blank, the bottom status bar should display “All fields must be completed” when “Add Song” is clicked.
+The year field must be a valid integer. If this is invalid, the status bar should display “Please enter a valid number”.
+Pressing the Tab key should move between the text fields. 
+When the user successfully adds a song, the fields should be cleared and the song should appear in the songs list on the right. 
+When the user clicks the “Clear” button, all text in the input fields and the status bar should be cleared.
